@@ -16,12 +16,11 @@ body {
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.521);
     padding-bottom: 40px;
-
 }
 
 .input {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 14px;
+    font-size: 15px;
     width: 70%;
     height: 30px;
     margin: 5px;
@@ -29,27 +28,25 @@ body {
     border: 1px solid #ccc;
 }
 
-.input:hover {
-    transform: scale(1.01);
-    border: 1px solid rgb(17, 179, 255);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.521);
-
-}
-
-.input:focus {
+.input:hover, .input:focus {
     transform: scale(1.01);
     border: 1px solid rgb(17, 179, 255);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.521);
     outline: none;
 }
 
-#title, #description, .btn, .input {
+#title, #description, .btn, .input, p, h2, .container {
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 #title:hover, #description:hover {
     color: rgb(0, 162, 255);
     transform: scale(1.05);
+}
+
+p:hover, h2:hover {
+    color: rgb(92, 141, 255);
+    transform: translateY(-2px);
 }
 
 .btn {
@@ -62,7 +59,6 @@ body {
     font-weight: bold;
     border: none;
     border-radius: 4px;
-    cursor: pointer;
     margin-top: 10px;
 }
 
@@ -75,4 +71,9 @@ body {
     transform: translateY(1px);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.623);
     background-color: rgb(0, 50, 73);
+}
+
+.container:has(.btn:active) {
+    transform: scale(0.99);
+    background-color: rgb(189, 227, 253);
 }
